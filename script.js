@@ -38,7 +38,7 @@ addTaskForm.addEventListener("submit", (event) => {
     newSpan.textContent = "delete";
 
 
-
+    newLi.appendChild(newInput)
     newLi.appendChild(newLabel);
     newLi.appendChild(newSpan);
     taskList.appendChild(newLi);
