@@ -1,94 +1,85 @@
-body{
+body {
     font-family: Tahoma;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
 }
 
-h3{
-    font-weight: normal;
-}
 
-#wrapper{
+#wrapper {
     width: 90%;
+    max-width: 700px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px #000000;
-    /* box-sizing: border-box; */
-    margin-bottom: 50px;
-
+    overflow: hidden;
 }
 
-#page-banner{
+
+#page-banner {
     background: rgb(175, 175, 175);
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
-#page-banner h1, #page-banner p{
-    width: 100%;
-    text-align: center;
+#page-banner h1,
+#page-banner p {
     margin: 10px 0;
 }
 
-#page-banner input{
+#page-banner input {
     width: 90%;
     max-width: 300px;
-    margin: 20px auto;
+    margin: 20px auto 0;
     display: block;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
     color: #444;
-}
-
-#task-list{
-    margin-left: 100px;
-}
-
-
-
-ul{
-    list-style-type: none;
-}
-
-input:checked + label{
-    text-decoration: line-through;
-}
-
-#add-task{
-    text-align: center;
-}
-
-#add-task input{
-    display: block;
-    margin: 20px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    border-radius: 4px 0 0 4px;
     box-sizing: border-box;
-    width: 300px;
-    float: left;
 }
 
-#add-task button{
-    border: 1px solid cadetblue;
-    background: cadetblue;
-    padding: 10px 20px;
-    font-size: 16px;
-    display: inline-block;
+
+#task-list {
+    padding: 20px 30px;
+}
+
+#task-list h3 {
+    font-weight: normal;
+}
+
+#task-list ul {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    width: 100px;
-    margin: 20px 0;
-    color: white;
-
-
 }
 
-.delete{
-    float: right;
+
+#task-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+#task-list li input[type="checkbox"] {
+    cursor: pointer;
+}
+
+
+#task-list li input:checked + label {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
+.delete {
+    margin-left: auto;
     background: cadetblue;
     padding: 6px;
     border-radius: 4px;
@@ -96,7 +87,39 @@ input:checked + label{
     color: white;
 }
 
-.delete:hover{
+.delete:hover {
     background: #444;
 }
 
+
+#add-task {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+#add-task input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 300px;
+}
+
+
+#add-task button {
+    border: 1px solid cadetblue;
+    background: cadetblue;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 100px;
+    color: white;
+}
+
+#add-task button:hover {
+    background: #444;
+}
